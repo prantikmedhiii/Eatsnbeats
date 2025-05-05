@@ -1,0 +1,1778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EatsnBeats - The Culinary Chronicles: A Journey Through Flavor</title>
+    <meta name="description" content="Experience the fusion of tradition and innovation at EatsnBeats, where premium ingredients meet artistic presentation in a sophisticated culinary journey." />
+    <meta name="author" content="EatsnBeats Culinary Team" />
+
+    <meta property="og:title" content="EatsnBeats - The Culinary Chronicles" />
+    <meta property="og:description" content="Experience the fusion of tradition and innovation at EatsnBeats, where premium ingredients meet artistic presentation in a sophisticated culinary journey." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@eatsnbeats" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://eatsnbeats.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap">
+    
+    <!-- Structured Data for Restaurant -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "EatsnBeats",
+        "description": "A high-end restaurant offering a culinary journey through exceptional flavors and artisanal creations.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Gourmet Avenue, Culinary District",
+          "addressLocality": "Foodie City",
+          "addressRegion": "FC",
+          "postalCode": "98765",
+          "addressCountry": "US"
+        },
+        "telephone": "+1-555-123-4567",
+        "openingHours": [
+          "Mo-Fr 12:00-22:00",
+          "Sa 11:00-23:00",
+          "Su 11:00-21:00"
+        ],
+        "servesCuisine": ["International", "Fusion", "Gourmet"]
+      }
+    </script>
+    
+    <style>
+      /* ====================
+         Base Styles
+         ==================== */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --culinary-dark: #121212;
+        --culinary-light: #f8f5f0;
+        --culinary-gold: #DAA520;
+        --culinary-accent: #F8B400;
+        
+        --font-sans: 'Inter', sans-serif;
+        --font-serif: 'Playfair Display', serif;
+        --font-cursive: 'Dancing Script', cursive;
+        
+        --border-radius: 0.5rem;
+        --transition: all 0.3s ease;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        color: #333;
+        background-color: var(--culinary-light);
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: var(--transition);
+      }
+
+      ul, ol {
+        list-style: none;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      /* ====================
+         Typography
+         ==================== */
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .gold-text {
+        color: var(--culinary-gold);
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-subheading {
+        font-family: var(--font-cursive);
+        color: var(--culinary-gold);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .section-heading {
+        font-size: 2.5rem;
+        color: var(--culinary-dark);
+      }
+
+      .section-description {
+        max-width: 42rem;
+        margin: 0 auto;
+        color: #666;
+      }
+
+      .text-left {
+        text-align: left;
+      }
+
+      /* ====================
+         Buttons
+         ==================== */
+
+      .cta-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--culinary-gold);
+        color: white;
+        font-weight: 500;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .cta-button:hover {
+        background-color: rgba(218, 165, 32, 0.8);
+      }
+
+      .outline-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid var(--culinary-gold);
+        color: var(--culinary-gold);
+        font-weight: 500;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .outline-button:hover {
+        background-color: rgba(218, 165, 32, 0.1);
+      }
+
+      .full-width {
+        width: 100%;
+      }
+
+      /* ====================
+         Navigation
+         ==================== */
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 1.5rem 0;
+        background-color: transparent;
+        transition: var(--transition);
+      }
+
+      .navbar.scrolled {
+        background-color: rgba(18, 18, 18, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+      }
+
+      .navbar-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar-content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar-logo {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 700;
+      }
+
+      .desktop-menu {
+        display: none;
+      }
+
+      .nav-link {
+        color: white;
+        margin-left: 2rem;
+        position: relative;
+      }
+
+      .nav-link:hover {
+        color: var(--culinary-gold);
+      }
+
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--culinary-gold);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 0.5rem;
+        z-index: 1001;
+      }
+
+      .menu-icon {
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        transition: var(--transition);
+      }
+
+      .menu-icon::before,
+      .menu-icon::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        transition: var(--transition);
+      }
+
+      .menu-icon::before {
+        top: -8px;
+      }
+
+      .menu-icon::after {
+        bottom: -8px;
+      }
+
+      .menu-toggle.active .menu-icon {
+        background-color: transparent;
+      }
+
+      .menu-toggle.active .menu-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+      }
+
+      .menu-toggle.active .menu-icon::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+      }
+
+      .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(18, 18, 18, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-menu.active {
+        display: block;
+      }
+
+      .mobile-nav-link {
+        display: block;
+        color: white;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-nav-link:hover {
+        color: var(--culinary-gold);
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      /* ====================
+         Hero Section
+         ==================== */
+
+      .hero-section {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--culinary-dark);
+        color: white;
+        padding: 4rem 0;
+        overflow: hidden;
+      }
+
+      .bg-texture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        opacity: 0.1;
+      }
+
+      .floating-ingredient {
+        position: absolute;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      .floating-1 {
+        top: 20%;
+        left: 15%;
+        animation: float 5s ease-in-out infinite;
+      }
+
+      .floating-2 {
+        bottom: 30%;
+        right: 20%;
+        animation: float 7s ease-in-out infinite 0.5s;
+      }
+
+      .floating-3 {
+        top: 40%;
+        right: 10%;
+        animation: float 6s ease-in-out infinite 1s;
+      }
+
+      .floating-4 {
+        bottom: 20%;
+        left: 25%;
+        animation: float 8s ease-in-out infinite 1.5s;
+      }
+
+      .ingredient-image {
+        width: 100%;
+        max-width: 100px;
+      }
+
+      .opacity-40 {
+        opacity: 0.4;
+      }
+
+      .opacity-50 {
+        opacity: 0.5;
+      }
+
+      .opacity-60 {
+        opacity: 0.6;
+      }
+
+      .rotate-45 {
+        transform: rotate(45deg);
+      }
+
+      .hero-container {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+      }
+
+      .hero-title {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .d-block {
+        display: block;
+      }
+
+      .hero-text {
+        font-size: 1.125rem;
+        max-width: 42rem;
+        margin: 0 auto 2rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 4rem;
+      }
+
+      .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+      }
+
+      .scroll-down-button {
+        color: white;
+        animation: bounce 2s infinite;
+      }
+
+      .scroll-down-button:hover {
+        color: var(--culinary-gold);
+      }
+
+      /* ====================
+         Dividers
+         ==================== */
+
+      .wave-divider {
+        position: relative;
+        height: 80px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .wave-divider::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23f8f5f0'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23f8f5f0'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23f8f5f0'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+      }
+
+      .torn-paper-divider {
+        position: relative;
+        height: 70px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .torn-paper-divider::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z' fill='%23f8f5f0'%3E%3C/path%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+      }
+
+      /* ====================
+         About Section
+         ==================== */
+
+      .about-section {
+        background-color: var(--culinary-light);
+        padding: 5rem 0;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-image-container {
+        position: relative;
+      }
+
+      .image-border-decoration {
+        position: relative;
+      }
+
+      .image-border-decoration::before,
+      .image-border-decoration::after {
+        content: "";
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid var(--culinary-gold);
+        z-index: 1;
+      }
+
+      .image-border-decoration::before {
+        top: -1rem;
+        left: -1rem;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      .image-border-decoration::after {
+        bottom: -1rem;
+        right: -1rem;
+        border-top: none;
+        border-left: none;
+      }
+
+      .about-image {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .about-heading {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* ====================
+         Features Section
+         ==================== */
+
+      .features-section {
+        background-color: var(--culinary-dark);
+        color: white;
+        padding: 5rem 0;
+      }
+
+      .features-section .section-heading {
+        color: white;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+      }
+
+      .feature-card:hover {
+        border-color: var(--culinary-gold);
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .feature-svg {
+        stroke: var(--culinary-gold);
+      }
+
+      .feature-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-description {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* ====================
+         Menu Gallery Section
+         ==================== */
+
+      .menu-gallery-section {
+        background-color: var(--culinary-light);
+        padding: 5rem 0;
+      }
+
+      .dishes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .dish-card {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        height: 280px;
+        background-color: var(--culinary-dark);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .dish-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .dish-card:hover .dish-image {
+        transform: scale(1.1);
+      }
+
+      .dish-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+        color: white;
+        transition: var(--transition);
+      }
+
+      .dish-name {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .dish-description {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* ====================
+         Why Choose Us Section
+         ==================== */
+
+      .why-choose-us-section {
+        background-color: var(--culinary-dark);
+        color: white;
+        padding: 5rem 0;
+      }
+
+      .why-choose-us-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .why-choose-us-section .section-heading {
+        color: white;
+      }
+
+      .benefits-list {
+        margin-bottom: 2rem;
+      }
+
+      .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .benefit-icon {
+        color: var(--culinary-gold);
+        margin-right: 0.75rem;
+        font-size: 1.25rem;
+      }
+
+      .benefit-text {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .why-choose-us-description {
+        margin-bottom: 2rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .why-choose-us-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .gallery-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .gallery-column-offset {
+        margin-top: 2rem;
+      }
+
+      .gallery-image-container {
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 100%;
+        position: relative;
+      }
+
+      .gallery-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ====================
+         Contact Section
+         ==================== */
+
+      .contact-section {
+        background-color: var(--culinary-light);
+        padding: 5rem 0;
+      }
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .form-card,
+      .info-card,
+      .social-card {
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .info-card {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-heading,
+      .info-heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--culinary-dark);
+      }
+
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        color: #4b5563;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background-color: #f9fafb;
+        border: 1px solid #d1d5db;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--culinary-gold);
+        box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+      }
+
+      textarea.form-control {
+        resize: vertical;
+      }
+
+      .info-items {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .info-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: rgba(218, 165, 32, 0.1);
+        border-radius: 50%;
+        margin-right: 1rem;
+        color: var(--culinary-gold);
+      }
+
+      .info-svg {
+        stroke: currentColor;
+      }
+
+      .info-title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .info-text {
+        color: #4b5563;
+      }
+
+      .hours-info {
+        margin-top: 1rem;
+      }
+
+      .hours-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .hours-item {
+        display: flex;
+        justify-content: space-between;
+        color: #4b5563;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--culinary-dark);
+        color: white;
+        transition: var(--transition);
+      }
+
+      .social-link:hover {
+        background-color: var(--culinary-gold);
+        transform: translateY(-3px);
+      }
+
+      .social-icon {
+        stroke: currentColor;
+      }
+
+      .map-container {
+        height: 400px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+
+      /* ====================
+         Footer
+         ==================== */
+
+      .footer {
+        background-color: var(--culinary-dark);
+        color: white;
+        padding: 4rem 0 2rem;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .footer-logo {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-description {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 1.5rem;
+      }
+
+      .back-to-top {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background-color: rgba(218, 165, 32, 0.2);
+        color: var(--culinary-gold);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .back-to-top:hover {
+        background-color: rgba(218, 165, 32, 0.3);
+      }
+
+      .arrow-up {
+        stroke: currentColor;
+      }
+
+      .footer-heading {
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        color: var(--culinary-gold);
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .footer-link {
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
+      }
+
+      .footer-link:hover {
+        color: white;
+      }
+
+      .newsletter-form {
+        display: flex;
+        margin-top: 1.5rem;
+      }
+
+      .newsletter-input {
+        flex-grow: 1;
+        padding: 0.75rem 1rem;
+        background-color: #1a1a1a;
+        color: white;
+        border: none;
+        border-top-left-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+      }
+
+      .newsletter-input:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(218, 165, 32, 0.5);
+      }
+
+      .newsletter-button {
+        padding: 0.75rem 1rem;
+        background-color: var(--culinary-gold);
+        color: white;
+        border: none;
+        border-top-right-radius: var(--border-radius);
+        border-bottom-right-radius: var(--border-radius);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .newsletter-button:hover {
+        background-color: rgba(218, 165, 32, 0.8);
+      }
+
+      .footer-bottom {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      /* ====================
+         Animations
+         ==================== */
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+      }
+
+      .reveal.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ====================
+         Responsive Styles
+         ==================== */
+
+      @media (min-width: 576px) {
+        .hero-title {
+          font-size: 4rem;
+        }
+        
+        .hero-subtitle {
+          font-size: 2rem;
+        }
+        
+        .ingredient-image {
+          max-width: 120px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .section-heading {
+          font-size: 3rem;
+        }
+        
+        .desktop-menu {
+          display: flex;
+        }
+        
+        .menu-toggle {
+          display: none;
+        }
+        
+        .hero-buttons {
+          flex-direction: row;
+        }
+        
+        .about-content,
+        .why-choose-us-content,
+        .contact-content,
+        .footer-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .form-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .features-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .footer-content {
+          grid-template-columns: 1.5fr 1fr 1.5fr;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .ingredient-image {
+          max-width: 150px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+      <div class="container navbar-container">
+        <div class="navbar-content">
+          <a href="#" class="navbar-logo">
+            <span class="gold-text">Eats</span>n<span class="gold-text">Beats</span>
+          </a>
+          
+          <!-- Desktop Menu -->
+          <div class="desktop-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          
+          <!-- Mobile Menu Toggle -->
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="menu-icon"></span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu Dropdown -->
+      <div class="mobile-menu">
+        <div class="container mobile-menu-container">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#menu" class="mobile-nav-link">Menu</a>
+          <a href="#gallery" class="mobile-nav-link">Gallery</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="bg-texture"></div>
+      
+      <!-- Floating burger ingredients -->
+      <div class="floating-ingredient floating-1" data-speed="0.03">
+        <img src="/lovable-uploads/01cf02ad-f7e0-49d2-b5f0-ecc1df647f47.png" alt="" class="ingredient-image opacity-50">
+      </div>
+      <div class="floating-ingredient floating-2" data-speed="0.05">
+        <img src="/lovable-uploads/b5162a04-6e06-41c2-b92f-c0998168f750.png" alt="" class="ingredient-image opacity-60">
+      </div>
+      <div class="floating-ingredient floating-3" data-speed="0.08">
+        <img src="/lovable-uploads/01cf02ad-f7e0-49d2-b5f0-ecc1df647f47.png" alt="" class="ingredient-image opacity-40">
+      </div>
+      <div class="floating-ingredient floating-4" data-speed="0.04">
+        <img src="/lovable-uploads/b5162a04-6e06-41c2-b92f-c0998168f750.png" alt="" class="ingredient-image opacity-50 rotate-45">
+      </div>
+      
+      <div class="container hero-container">
+        <h1 class="hero-title animate-fade-in-up" style="animation-delay: 0.2s;">
+          EatsnBeats
+        </h1>
+        <h2 class="hero-subtitle animate-fade-in-up" style="animation-delay: 0.4s;">
+          The Culinary Chronicles: <span class="d-block">A Journey Through Flavor</span>
+        </h2>
+        <p class="hero-text animate-fade-in-up" style="animation-delay: 0.6s;">
+          Experience the fusion of tradition and innovation in every bite, where premium ingredients meet artistic presentation.
+        </p>
+        <div class="hero-buttons animate-fade-in-up" style="animation-delay: 0.8s;">
+          <a href="#contact" class="cta-button">Contact Us</a>
+          <a href="#menu" class="outline-button">Explore Menu</a>
+        </div>
+        
+        <div class="scroll-indicator">
+          <a href="#about" class="scroll-down-button" aria-label="Scroll down">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-divider"></div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subheading reveal">Welcome to Our Restaurant</h3>
+          <h2 class="section-heading reveal">Exploring The World Of Gastronomy</h2>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-image-container reveal" style="transition-delay: 0.2s;">
+            <div class="image-border-decoration">
+              <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="Fine dining experience" class="about-image">
+            </div>
+          </div>
+          
+          <div class="about-text reveal" style="transition-delay: 0.4s;">
+            <h3 class="about-heading">Our Philosophy</h3>
+            <p>
+              At EatsnBeats, we believe that food is more than sustenance—it's an art form, a cultural expression, and a shared experience that brings people together. Our passion for culinary excellence drives us to explore new techniques, source the finest ingredients, and create dishes that delight all the senses.
+            </p>
+            <p>
+              Each plate that leaves our kitchen tells a story—of traditional techniques perfected over generations, of innovative approaches that challenge conventions, and of our commitment to sustainable, ethical practices that honor both our planet and our palates.
+            </p>
+            <a href="#" class="cta-button">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="torn-paper-divider"></div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subheading reveal">What Makes Us Special</h3>
+          <h2 class="section-heading reveal">Our Culinary Excellence</h2>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card reveal" style="transition-delay: 0.2s;">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M3 11v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3"/><path d="M12 19H4a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-3.83"/><path d="m3 11 7.77-6.04a2 2 0 0 1 2.46 0L21 11H3Z"/><path d="M12.97 19.77 7 15h12.5l-3.75 4.5a2 2 0 0 1-2.78.27Z"/></svg>
+            </div>
+            <h3 class="feature-title">Authentic Taste</h3>
+            <p class="feature-description">
+              Experience flavors that have been perfected through generations of culinary tradition and innovation.
+            </p>
+          </div>
+          
+          <div class="feature-card reveal" style="transition-delay: 0.4s;">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M6.8 22 12 13.9 17.2 22"/><path d="M20 17.6 12 9.4l-8 8.2"/><path d="m20 17.6-8-8.2-8 8.2"/><path d="m12 9.4-8-8.3 8 8.3 8-8.3-8 8.3Z"/><path d="m8.3 2 3.7 3.7L15.7 2"/></svg>
+            </div>
+            <h3 class="feature-title">Premium Ingredients</h3>
+            <p class="feature-description">
+              We source only the freshest, highest-quality ingredients from local farmers and trusted suppliers.
+            </p>
+          </div>
+          
+          <div class="feature-card reveal" style="transition-delay: 0.6s;">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-svg"><path d="M6 8h12"/><path d="M6 12h12"/><path d="M6 16h12"/><path d="M2 8h0"/><path d="M2 12h0"/><path d="M2 16h0"/></svg>
+            </div>
+            <h3 class="feature-title">Creative Menu</h3>
+            <p class="feature-description">
+              Our chefs combine classical techniques with modern creativity to deliver unique culinary experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-divider"></div>
+
+    <!-- Menu Gallery Section -->
+    <section id="menu" class="menu-gallery-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subheading reveal">Taste Our Creations</h3>
+          <h2 class="section-heading reveal">Signature Dishes</h2>
+          <p class="section-description reveal">
+            Our menu celebrates the finest seasonal ingredients, prepared with care and presented with artistic flair. Here are some of our guests' favorites.
+          </p>
+        </div>
+        
+        <div class="dishes-grid">
+          <div class="dish-card reveal" style="transition-delay: 0.1s;">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Sushi Selection" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Sushi Selection</h3>
+              <p class="dish-description">Fresh fish, seasonal ingredients, and traditional techniques come together in our signature sushi platters.</p>
+            </div>
+          </div>
+          
+          <div class="dish-card reveal" style="transition-delay: 0.25s;">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Gourmet Burger" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Gourmet Burger</h3>
+              <p class="dish-description">House-ground premium beef, artisanal cheese, and our secret sauce on a freshly baked brioche bun.</p>
+            </div>
+          </div>
+          
+          <div class="dish-card reveal" style="transition-delay: 0.4s;">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Artisanal Skewers" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Artisanal Skewers</h3>
+              <p class="dish-description">Marinated and grilled to perfection, our skewers feature a variety of meats and seasonal vegetables.</p>
+            </div>
+          </div>
+          
+          <div class="dish-card reveal" style="transition-delay: 0.55s;">
+            <img src="https://images.unsplash.com/photo-1504387432042-8aca549e4729?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Belgian Waffles" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Belgian Waffles</h3>
+              <p class="dish-description">Light and crispy waffles topped with seasonal fruits, house-made whipped cream, and maple syrup.</p>
+            </div>
+          </div>
+          
+          <div class="dish-card reveal" style="transition-delay: 0.7s;">
+            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Fried Rice" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Fried Rice</h3>
+              <p class="dish-description">Fragrant jasmine rice stir-fried with seasonal vegetables, eggs, and your choice of protein.</p>
+            </div>
+          </div>
+          
+          <div class="dish-card reveal" style="transition-delay: 0.85s;">
+            <img src="https://images.unsplash.com/photo-1432139509613-5c4255815697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+              alt="Italian Pork" class="dish-image">
+            <div class="dish-overlay">
+              <h3 class="dish-name">Italian Pork</h3>
+              <p class="dish-description">Slow-roasted pork with Italian herbs, served with roasted vegetables and house-made gremolata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="torn-paper-divider"></div>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us-section">
+      <div class="container">
+        <div class="why-choose-us-content">
+          <div class="why-choose-us-text">
+            <div class="section-header text-left">
+              <h3 class="section-subheading reveal">The EatsnBeats Experience</h3>
+              <h2 class="section-heading reveal">Why Choose Us</h2>
+            </div>
+            
+            <ul class="benefits-list reveal" style="transition-delay: 0.2s;">
+              <li class="benefit-item">
+                <span class="benefit-icon">✦</span>
+                <span class="benefit-text">Artisanal approach to every dish</span>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-icon">✦</span>
+                <span class="benefit-text">Seasonally changing menu featuring local ingredients</span>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-icon">✦</span>
+                <span class="benefit-text">Award-winning chefs with international experience</span>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-icon">✦</span>
+                <span class="benefit-text">Carefully curated wine and cocktail selection</span>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-icon">✦</span>
+                <span class="benefit-text">Intimate, elegant atmosphere perfect for special occasions</span>
+              </li>
+            </ul>
+            
+            <p class="why-choose-us-description reveal" style="transition-delay: 0.3s;">
+              We believe that dining is not just about food—it's about creating memories, celebrating special moments, and experiencing the joy that comes from a perfectly executed dish served in elegant surroundings.
+            </p>
+            
+            <a href="#" class="cta-button reveal" style="transition-delay: 0.4s;">Make a Reservation</a>
+          </div>
+          
+          <div class="why-choose-us-gallery">
+            <div class="gallery-column">
+              <div class="gallery-image-container reveal" style="transition-delay: 0.3s;">
+                <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Chef preparing food" class="gallery-image">
+              </div>
+              <div class="gallery-image-container reveal" style="transition-delay: 0.5s;">
+                <img src="https://images.unsplash.com/photo-1551218372-a8789b81b253?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Fine dining presentation" class="gallery-image">
+              </div>
+            </div>
+            <div class="gallery-column gallery-column-offset">
+              <div class="gallery-image-container reveal" style="transition-delay: 0.4s;">
+                <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Restaurant interior" class="gallery-image">
+              </div>
+              <div class="gallery-image-container reveal" style="transition-delay: 0.6s;">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                  alt="Cocktail preparation" class="gallery-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wave-divider"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-subheading">Get In Touch</h3>
+          <h2 class="section-heading">Contact Us</h2>
+          <p class="section-description">
+            Have questions or want to make a reservation? Our team is here to assist you.
+          </p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-form-container">
+            <div class="form-card">
+              <h3 class="form-heading">Send us a Message</h3>
+              
+              <form id="contactForm" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button full-width">Send Message</button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="contact-info-container">
+            <div class="info-card">
+              <h3 class="info-heading">Contact Information</h3>
+              
+              <div class="info-items">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h4 class="info-title">Address</h4>
+                    <p class="info-text">123 Gourmet Avenue, Culinary District<br>Foodie City, FC 98765</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h4 class="info-title">Phone</h4>
+                    <p class="info-text">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-svg"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h4 class="info-title">Email</h4>
+                    <p class="info-text">info@eatsnbeats.com</p>
+                  </div>
+                </div>
+                
+                <div class="hours-info">
+                  <h4 class="info-title">Opening Hours</h4>
+                  <ul class="hours-list">
+                    <li class="hours-item">
+                      <span class="day">Monday - Friday</span>
+                      <span class="hours">12:00 PM - 10:00 PM</span>
+                    </li>
+                    <li class="hours-item">
+                      <span class="day">Saturday</span>
+                      <span class="hours">11:00 AM - 11:00 PM</span>
+                    </li>
+                    <li class="hours-item">
+                      <span class="day">Sunday</span>
+                      <span class="hours">11:00 AM - 9:00 PM</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            <div class="social-card">
+              <h3 class="info-heading">Follow Us</h3>
+              
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2168!2d-73.9876!3d40.7484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzU0LjIiTiA3M8KwNTknMTUuNCJX!5e0!3m2!1sen!2sus!4v1620764800000!5m2!1sen!2sus" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+            title="Restaurant Location"
+            aria-hidden="false"
+            tabindex="0">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <h3 class="footer-logo">
+              <span class="gold-text">Eats</span>n<span class="gold-text">Beats</span>
+            </h3>
+            <p class="footer-description">
+              A culinary journey through exceptional flavors and artisanal creations. Experience the finest dining in an elegant atmosphere.
+            </p>
+            <button class="back-to-top" aria-label="Back to top">
+              <span>Back to Top</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-up"><path d="m18 15-6-6-6 6"/></svg>
+            </button>
+          </div>
+          
+          <div class="footer-links">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-nav">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li><a href="#menu" class="footer-link">Menu</a></li>
+              <li><a href="#gallery" class="footer-link">Gallery</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-newsletter">
+            <h4 class="footer-heading">Newsletter</h4>
+            <p class="footer-description">
+              Subscribe to our newsletter for updates on seasonal menus, special events, and culinary insights.
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Your email" class="newsletter-input" required>
+              <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="current-year">2025</span> EatsnBeats. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+      // Navbar scroll behavior
+      const navbar = document.getElementById('navbar');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+
+      // Scroll event for navbar background
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+      }
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+
+      // Floating ingredients hover effect
+      document.addEventListener('mousemove', (e) => {
+        const floatingIngredients = document.querySelectorAll('.floating-ingredient');
+        
+        floatingIngredients.forEach(item => {
+          const speed = parseFloat(item.getAttribute('data-speed') || '0.05');
+          const x = (window.innerWidth - e.pageX * speed) / 100;
+          const y = (window.innerHeight - e.pageY * speed) / 100;
+          
+          item.style.transform = `translateX(${x}px) translateY(${y}px) rotate(${x * y}deg)`;
+        });
+      });
+
+      // Intersection Observer for scroll animations
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revealElements.forEach(element => {
+        observer.observe(element);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Back to top button
+      const backToTopButton = document.querySelector('.back-to-top');
+      if (backToTopButton) {
+        backToTopButton.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+
+      // Contact form submission (placeholder functionality)
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+          
+          // Form validation
+          if (!name || !email || !subject || !message) {
+            alert('Please fill in all fields');
+            return;
+          }
+          
+          // Show success message (in a real application, you would send this data to a server)
+          alert('Thank you for your message! We will get back to you soon.');
+          contactForm.reset();
+        });
+      }
+
+      // Newsletter form submission (placeholder functionality)
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          
+          const email = newsletterForm.querySelector('input[type="email"]').value;
+          
+          if (!email) {
+            alert('Please enter your email address');
+            return;
+          }
+          
+          alert('Thank you for subscribing to our newsletter!');
+          newsletterForm.reset();
+        });
+      }
+
+      // Update current year in footer
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+      
+      // Initial animations
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+            el.style.opacity = '1';
+          });
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
